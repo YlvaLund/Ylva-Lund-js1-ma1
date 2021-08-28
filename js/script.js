@@ -19,3 +19,18 @@ const cat = {
         console.log("Meow!");
     }
 };
+
+
+// question 2
+
+let heading = document.querySelector("h3");
+heading.innerHTML = "Updated heading";
+
+// question 3
+
+heading.style.fontSize = "2em"
+
+// question 4
+
+
+
