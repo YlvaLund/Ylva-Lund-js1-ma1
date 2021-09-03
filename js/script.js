@@ -32,5 +32,29 @@ heading.style.fontSize = "2em"
 
 // question 4
 
+heading.classList.add("subheading");
 
+// question 5
 
+let paragraphs = document.querySelectorAll("p");
+
+for (let i = 0; i < paragraphs.length; i++) {
+    console.log(paragraphs[i]);
+    paragraphs[i].style.color = "red";
+}
+
+// question 6
+
+let resultsContainer = document.querySelector("div.results");
+resultsContainer.innerHTML = "<p>New paragraph</p>";
+resultsContainer.style.backgroundColor = "yellow";
+
+// question 7
+
+function printNames(list) {
+    for (let i = 0; i < list.length; i++) {
+        console.log(list[i].name);
+    }
+}
+
+printNames(cats);
