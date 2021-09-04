@@ -58,3 +58,36 @@ function printNames(list) {
 }
 
 printNames(cats);
+
+// question 8
+
+function createCats(cats) {
+    let temporaryHtml = "";
+    for (let i = 0; i < cats.length; i++) {
+        // This was the way we wore taught in the lecture creating HTML from objects - part 1
+        // but with the null-coalescing-operator the cats age can still be 0, if its less than one year old.
+        //https://scotch.io/tutorials/javascripts-null-coalescing-operator
+
+        /*
+        let catAge = "Age unknown";
+        if (cats[i].age){
+            catAge = cats[i].age;
+        }
+        temporaryHtml += `<div class="cat">
+            <h5>${cats[i].name}</h5>
+            <p>${catAge}</p>   
+        </div>
+        `;
+        */
+
+        temporaryHtml += `<div class="cat">
+            <h5>${cats[i].name}</h5>
+            <p>${cats[i].age ?? 'Age unknown'}</p>   
+        </div>
+        `;
+    }
+    const catContainer = document.querySelector("div.cat-container");
+    catContainer.innerHTML = temporaryHtml;
+}
+
+createCats(cats);
