@@ -86,8 +86,9 @@ function createCats(cats) {
         </div>
         `;
     }
-    const catContainer = document.querySelector("div.cat-container");
-    catContainer.innerHTML = temporaryHtml;
+    return temporaryHtml;
 }
 
-createCats(cats);
+const catContainer = document.querySelector("div.cat-container");
+catContainer.innerHTML = createCats(cats);
+
